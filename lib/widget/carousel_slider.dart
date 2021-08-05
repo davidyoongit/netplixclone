@@ -48,7 +48,7 @@ class _CarouselImageState extends State<CarouselImage> {
           child: Text(_currentKeyword),
         ), //Text
         Container(
-          child: Row(children: <Widget>[
+          child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[
             Container(
               child: Column(children: <Widget>[
                 likes[_currentPage]
@@ -107,3 +107,5 @@ class _CarouselImageState extends State<CarouselImage> {
     );
   }
 }
+
+List<Widget> makeIndicator(List list, int )
