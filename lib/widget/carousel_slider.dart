@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/model/model_movie.dart';
 
-class CarouseImage extends StatefulWidget {
+class CarouselImage extends StatefulWidget {
   final List<Movie> movie;
-  CarouseImage({this.movie});
-  _CarouseImage createState() => _CarouseImageState();
+  CarouselImage({this.movie});
+  _CarouselImage createState() => _CarouselImageState();
 }
 
-class _CarouseImageState extends State<CarouselImage> {
+class _CarouselImageState extends State<CarouselImage> {
   List<Movie> movies;
   List<Widget> images;
   List<String> keywords;
