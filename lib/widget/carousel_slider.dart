@@ -34,14 +34,15 @@ class _CarouselImageState extends State<CarouselImage> {
         padding: EdgeInsets.all(20),
       ),
       CarouselSlider(
-        items: images,
-        onPageChanged: (index) {
-          setState(() {
-            _currentPage = index;
-            _currentKeyword = keywords[_currentPage];
-          });
-        },
-      ), //Carousel Slider
+          items: images,
+          options: CarouselOptions(
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+                _currentKeyword = keywords[_currentPage];
+              });
+            },
+          )), //Carousel Slider
       Container(
         child: Text(_currentKeyword),
       )
