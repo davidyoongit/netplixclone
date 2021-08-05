@@ -5,7 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 class CarouselImage extends StatefulWidget {
   final List<Movie> movies;
   CarouselImage({this.movies});
-  _CarouselImage createState() => _CarouselImageState();
+  _CarouselImageState createState() => _CarouselImageState();
 }
 
 class _CarouselImageState extends State<CarouselImage> {
@@ -23,7 +23,7 @@ class _CarouselImageState extends State<CarouselImage> {
     images = movies.map((m) => Image.asset('./images/' + m.poster)).toList();
     keywords = movies.map((m) => m.keyword).toList();
     likes = movies.map((m) => m.like).toList();
-    _currentKeyword = keyword[0];
+    _currentKeyword = keywords[0];
   }
 
   @override
@@ -35,7 +35,7 @@ class _CarouselImageState extends State<CarouselImage> {
       ),
       CarouselSlider(
         items: images,
-        onPageChange: (index) {
+        onPageChanged: (index) {
           setState(() {
             _currentPage = index;
             _currentKeyword = keywords[_currentPage];
