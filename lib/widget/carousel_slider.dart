@@ -46,7 +46,27 @@ class _CarouselImageState extends State<CarouselImage> {
       Container(
         padding: EdgeInsets.fromLTRB(0, 10, 0, 3),
         child: Text(_currentKeyword),
-      )
+      ), //Text
+      Container(
+          child: Row(children: <Widget>[
+        Container(
+          child: Column(children: <Widget>[
+            likes[_currentPage]
+                ? IconButton(
+                    icon: Icon(Icons.check),
+                    onPressed: () {},
+                  )
+                : IconButton(
+                    icon: Icon(Icons.add),
+                    onPressed: () {},
+                  ),
+            Text(
+              '내가 찜한 콘텐츠',
+              style: TextStyle(fontSize: 11),
+            )
+          ]),
+        )
+      ]))
     ]));
   }
 }
