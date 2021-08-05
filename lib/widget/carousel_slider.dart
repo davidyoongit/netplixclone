@@ -77,13 +77,29 @@ class _CarouselImageState extends State<CarouselImage> {
                       color: Colors.black,
                     ),
                     Padding(
-                      padding: EdgeInsets.add(3),
+                      padding: EdgeInsets.all(3),
                     ),
                     Text(
                       '재생',
                       style: TextStyle(color: Colors.black),
                     ),
                   ])),
+            ), // 2
+
+            Container(
+              padding: EdgeInsets.only(right: 10),
+              child: Column(
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.info),
+                    onPressed: () {},
+                  ),
+                  Text(
+                    '정보',
+                    style: TextStyle(fontSize: 11),
+                  )
+                ],
+              ),
             ),
           ]),
         ),
