@@ -36,7 +36,7 @@ class _CarouselImageState extends State<CarouselImage> {
       CarouselSlider(
           items: images,
           options: CarouselOptions(
-            onPageChanged: (index) {
+            onPageChanged: (index, reason) {
               setState(() {
                 _currentPage = index;
                 _currentKeyword = keywords[_currentPage];
