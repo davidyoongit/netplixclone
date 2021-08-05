@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/model/model_movie.dart';
-import 'package:carousel_slider/carousel_slider.dart'
+import 'package:carousel_slider/carousel_slider.dart';
 
 class CarouselImage extends StatefulWidget {
-  final List<Movie> movie;
-  CarouselImage({this.movie});
+  final List<Movie> movies;
+  CarouselImage({this.movies});
   _CarouselImage createState() => _CarouselImageState();
 }
 
