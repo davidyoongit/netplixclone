@@ -44,6 +44,7 @@ class _CarouselImageState extends State<CarouselImage> {
             },
           )), //Carousel Slider
       Container(
+        padding: EdgeInsets.fromLTRB(0, 10, 0, 3),
         child: Text(_currentKeyword),
       )
     ]));
