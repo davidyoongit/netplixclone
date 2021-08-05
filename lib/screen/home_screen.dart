@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/model/model_movie.dart';
+import 'package:helloworld/widget/carousel_slider.dart';
 
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
