@@ -1,7 +1,7 @@
 // detail_screen.dart
 import 'dart:ui'; //블러 이미지 백그라운드용
 import 'package:flutter/material.dart';
-import 'package:netflix_clone_lecture_note/model/model_movie.dart';
+import 'package:helloworld/model/model_movie.dart';
 
 class DetailScreen extends StatefulWidget {
   final Movie movie;
