@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/model/model_movie.dart';
+import 'package:helloworld/screen/detail_screen.dart';
 
 class CircleSlider extends StatelessWidget {
   final List<Movie> movies;
@@ -31,7 +32,15 @@ List<Widget> makeCircleImages(BuildContext context, List<Movie> movies) {
     results.add(
       InkWell(
         //클릭 가능한 위젯
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute<Null>(
+              fullscreenDialog: true,
+              builder: (BuildContext context) {
+                return DetailScreen(
+                  movie: movies[i],
+                );
+              }));
+        },
         child: Container(
           padding: EdgeInsets.only(right: 10),
           child: Align(
