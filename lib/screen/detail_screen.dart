@@ -30,7 +30,8 @@ class _DetailScreenState extends State<DetailScreen> {
                     width: double.maxFinite,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/' + widget.movie.poster),
+                        //image: AssetImage('images/' + widget.movie.poster),
+                        image: NetworkImage(widget.movie.poster),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -45,7 +46,8 @@ class _DetailScreenState extends State<DetailScreen> {
                               children: <Widget>[
                                 Container(
                                   padding: EdgeInsets.fromLTRB(0, 45, 0, 10),
-                                  child: Image.asset('images/' + widget.movie.poster),
+                                  // child: Image.asset('images/' + widget.movie.poster),
+                                  child: Image.network(widget.movie.poster),
                                   height: 300,
                                 ),
                                 Container(
@@ -116,7 +118,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     Container(
                       padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          setState(() {
+                            like = !like;
+                            widget.movie.reference.updateData({
+                              'like': like
+                            });
+                          });
+                        },
                         child: Column(
                           children: <Widget>[
                             like ? Icon(Icons.check) : Icon(Icons.add),
